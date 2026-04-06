@@ -23,7 +23,7 @@ jQuery(document).ready(function ($) {
         }
     }
 
-    // ✅ 修复：强制添加 .active 类，确保 CSS 一定生效
+
     function renderFavoriteBtn() {
         let favs = getFavorites();
         $('.nlf-favorite-btn').each(function () {
@@ -32,12 +32,12 @@ jQuery(document).ready(function ($) {
             let $goBtn = $btn.parent().find('.nlf-go-favorites');
 
             if (favs.includes(postId)) {
-                // ✅ 强制激活
+
                 $btn.addClass('active');
                 $btn.find('.nlf-text').text('已收藏');
                 $goBtn.show();
             } else {
-                // ✅ 强制移除
+
                 $btn.removeClass('active');
                 $btn.find('.nlf-text').text('收藏文章');
                 $goBtn.hide();
